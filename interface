@@ -1,0 +1,27 @@
+import java.util.*;
+
+interface father {
+    void money();
+
+    default void finance() {
+        System.out.println("I am finance");
+    }
+}
+
+interface mother {
+    void money();
+}
+
+class house implements father, mother {
+    public void money() {
+        System.out.println("I am money");
+    }
+}
+
+class main {
+    public static void main(String[] args) {
+        house a = new house();
+        a.money();
+        a.finance();
+    }
+}
